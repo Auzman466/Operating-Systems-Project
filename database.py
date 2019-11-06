@@ -1,10 +1,10 @@
 import sys
-import MySQLdb.connector as mc
+import MySQLdb as mc
 
 connection = mc.connect(host='localhost',
                         user='testuser',
                         passwd='testpass',
-                        db='bank')
+                        database='bank')
 
 cursor = connection.cursor()
 cursor.execute('DROP TABLE IF EXISTS customer')
