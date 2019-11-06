@@ -4,7 +4,7 @@ import MySQLdb as mc
 connection = mc.connect(host='localhost',
                         user='testuser',
                         passwd='testpass',
-                        database='bank')
+                        db='bank')
 
 cursor = connection.cursor()
 cursor.execute('DROP TABLE IF EXISTS customer')
