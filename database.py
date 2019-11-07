@@ -1,4 +1,3 @@
-import sys
 import MySQLdb as mc
 
 connection = mc.connect(host='localhost',
@@ -7,7 +6,7 @@ connection = mc.connect(host='localhost',
                         db='bank')
 
 cursor = connection.cursor()
-cursor.execute('DROP TABLE IF EXISTS customer')
+#cursor.execute('DROP TABLE IF EXISTS customer')
 
 # create tables
 # employee table
