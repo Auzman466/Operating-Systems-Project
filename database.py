@@ -1,12 +1,15 @@
 import MySQLdb as mc
 
 connection = mc.connect(host='localhost',
-                        user='testuser',
-                        passwd='testpass',
+                        user='pytester',
+                        passwd='monty',
                         db='bank')
 
 cursor = connection.cursor()
-#cursor.execute('DROP TABLE IF EXISTS customer')
+cursor.execute('DROP TABLE IF EXISTS transactions')
+cursor.execute('DROP TABLE IF EXISTS accounts')
+cursor.execute('DROP TABLE IF EXISTS clients')
+cursor.execute('DROP TABLE IF EXISTS employees')
 
 # create tables
 # employee table
@@ -16,7 +19,7 @@ employee_id INT AUTO_INCREMENT PRIMARY KEY,
 fname VARCHAR(20),
 lname VARCHAR(30),
 address VARCHAR(99),
-hire_date DATE
+hire_date VARCHAR(12)
 );
 """
 cursor.execute(sql_command)
@@ -29,18 +32,19 @@ fname VARCHAR(20),
 lname VARCHAR(30), 
 gender CHAR(1),
 ssn VARCHAR(11),
-assigned_employee INT FOREIGN KEY REFERENCES employees(employee_id)
-);
+assigned_employee INT,
+FOREIGN KEY (assigned_employee) REFERENCES employees(employee_id));
 """
 cursor.execute(sql_command)
 
 # account table references client keys
 sql_command = """
 CREATE TABLE accounts (
-acc_num INT PRIMARY KEY 
+acc_num INT PRIMARY KEY,
 type VARCHAR(15),
 balance DECIMAL(10, 2),
-client_id INT FOREIGN KEY REFERENCES clients(client_number)
+client_id INT,
+FOREIGN KEY (client_id) REFERENCES clients(client_number)
 );
 """
 cursor.execute(sql_command)
@@ -52,7 +56,8 @@ transaction_num INT AUTO_INCREMENT PRIMARY KEY,
 trans_date DATE,
 description VARCHAR(99),
 amount DECIMAL(10, 2),
-account INT FOREIGN KEY REFERENCES accounts(acc_num)
+account INT,
+FOREIGN KEY (account) REFERENCES accounts(acc_num)
 );
 """
 cursor.execute(sql_command)
@@ -87,7 +92,7 @@ transactions_data = [('2019-10-27', 'Spotify', 9.99, 422501),
 for employee, p in enumerate(employees_data):
     # create sql command string
     format_str = """INSERT INTO employees (employee_id, fname, lname, address, hire_date)
-    VALUES ({employee_id} '{first}', '{last}', '{address}', {date});
+    VALUES ({employee_id}, '{first}', '{last}', '{address}', {date});
     """
     sql_command = format_str.format(employee_id=employee, first=p[0], last=p[1], address=p[2], date=p[3])
     print(sql_command)
