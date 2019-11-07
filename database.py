@@ -12,7 +12,7 @@ cursor = connection.cursor()
 # employee table
 sql_command = """
 CREATE TABLE employees (
-employee_id INT PRIMARY KEY,
+employee_id INT AUTO_INCREMENT PRIMARY KEY,
 fname VARCHAR(20),
 lname VARCHAR(30),
 address VARCHAR(99),
@@ -24,7 +24,7 @@ cursor.execute(sql_command)
 # client table
 sql_command = """
 CREATE TABLE clients ( 
-client_number INT PRIMARY KEY, 
+client_number INT AUTO_INCREMENT PRIMARY KEY, 
 fname VARCHAR(20), 
 lname VARCHAR(30), 
 gender CHAR(1),
@@ -48,7 +48,7 @@ cursor.execute(sql_command)
 # transactions table references account keys
 sql_command = """
 CREATE TABLE transactions(
-transaction_num INT PRIMARY KEY,
+transaction_num INT AUTO_INCREMENT PRIMARY KEY,
 trans_date DATE,
 description VARCHAR(99),
 amount DECIMAL(10, 2),
@@ -61,18 +61,18 @@ cursor.execute(sql_command)
 employees_data = [('John', 'Freeman', '420 Gordon Road', '2004-11-16'),
                   ('Colin', 'Henson', '4645 Stanton Road', '2019-10-27')]
 
-client_data = [('James', 'Smith', 'm', '721-07-4427'),
-               ('John', 'Williams', 'm', '529-56-2164'),
-               ('Mary', 'Jones', 'f', '394-78-0036'),
-               ('Jennifer', 'Lopez', 'f', '402-32-8027'),
+client_data = [('James', 'Smith', 'm', '721-07-4427', 0),
+               ('John', 'Williams', 'm', '529-56-2164', 0),
+               ('Mary', 'Jones', 'f', '394-78-0036', 1),
+               ('Jennifer', 'Lopez', 'f', '402-32-8027', 1),
                ]
 
-account_data = [(422501, 'Checking', 4123.00, 1),
-                (422502, 'Checking', 8000.50, 2),
-                (522501, 'Savings', 1500.33, 2),
-                (422503, 'Checking', 10400.00, 3),
-                (522502, 'Savings', 0.0, 3),
-                (422504, 'Checking', 12440.99, 4)
+account_data = [(422501, 'Checking', 4123.00, 0),
+                (422502, 'Checking', 8000.50, 1),
+                (522501, 'Savings', 1500.33, 1),
+                (422503, 'Checking', 10400.00, 2),
+                (522502, 'Savings', 0.0, 2),
+                (422504, 'Checking', 12440.99, 3)
                 ]
 
 transactions_data = [('2019-10-27', 'Spotify', 9.99, 422501),
