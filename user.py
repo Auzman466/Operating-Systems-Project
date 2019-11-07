@@ -60,8 +60,8 @@ def delete_account():
     cursor.execute(stmt, acc_num)
     result = cursor.fetchall()
     print(result)
-    bal = result[2]
-    if bal != 0:
+    bal = float(result[2])
+    if bal != 0.00:
         print('Cannot delete account with a balance.')
         menu()
     else:
@@ -85,6 +85,15 @@ def add_transaction():
     VALUES (%s, %s, %s, %s);
     """
     vals = (trans_date, trans_desc, amount, account)
+    cursor.execute(stmt, vals)
+    stmt = 'SELECT * FROM accounts WHERE acc_num = %s'
+    vals = account
+    cursor.execute(stmt, vals)
+    result = cursor.fetchall()
+    bal = float(result[2])
+    bal = bal - amount
+    stmt = 'UPDATE accounts SET balance = %s WHERE acc_num = %s'
+    vals = (bal, account)
     cursor.execute(stmt, vals)
     connection.commit()
     menu()
@@ -117,3 +126,6 @@ def menu():
         add_transaction()
     elif selection == 6:
         quit_bank()
+    else:
+        print('Invalid selection.')
+        menu()
