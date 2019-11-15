@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
+body, html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'Montserrat';
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 1em 2em;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 1em);
+  -webkit-box-shadow: 1px 1px 3px black;
+          box-shadow: 1px 1px 3px black;
+}
+
+header .logo {
+  padding: .25em;
+}
+
+header nav {
+  padding-top: .2em;
+  padding-right: 3em;
+}
+
+header nav .btn {
+  display: inline-block;
+  padding: .3em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-font-variant-ligatures: none;
+          font-variant-ligatures: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+header nav .btn--shadow {
+  color: black;
+  background: #FF5E00;
+}
+
+.cat-container {
+  position: absolute;
+  left: 200px;
+}
+
+.cat-container .button1 {
+  text-decoration: none;
+}
+
+.cat-container .button1 a {
+  position: absolute;
+  width: 398px;
+  height: 700px;
+  left: 130px;
+  top: 100px;
+  background: #2C003E;
+  cursor: pointer;
+}
+
+.cat-container .button1 a h1 {
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 80px;
+  position: absolute;
+  left: 21.97%;
+  right: 21.75%;
+}
+
+.cat-container .button2 a {
+  position: absolute;
+  width: 398px;
+  height: 700px;
+  left: 551px;
+  top: 100px;
+  background: #FF5E00;
+  cursor: pointer;
+}
+
+.cat-container .button2 a h1 {
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 80px;
+  position: absolute;
+  left: 21.97%;
+  right: 21.75%;
+}
+
+.cat-container .button3 a {
+  position: absolute;
+  width: 398px;
+  height: 700px;
+  left: 972px;
+  top: 100px;
+  background: #51DACF;
+  cursor: pointer;
+}
+
+.cat-container .button3 a h1 {
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 80px;
+  position: absolute;
+  left: 7.54%;
+  right: 7.79%;
+}
+/*# sourceMappingURL=home.css.map */
