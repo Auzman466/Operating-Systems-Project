@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+
+
+body, html {
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-family: 'Montserrat';
+
+    a {
+        text-decoration: none;
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 1em 2em;
+    z-index: 20;
+    display: flex;
+    justify-content: space-around;
+    width: calc(100% - 1em);
+    box-shadow: 1px 1px 3px black;
+
+    .logo {
+        padding: .25em;
+        font-weight: bold;
+
+        a {
+          color: #4CAF50;
+        }
+
+    }
+
+    nav {
+        padding-top: .2em;
+        padding-right: 3em;
+
+        .btn {
+            display: inline-block;
+            padding: .3em 1em;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-variant-ligatures: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+
+        .btn--shadow {
+            color: white;
+            background: #FF5E00;
+        }
+    }
+
+}
+
+section.hero {
+    position: absolute;
+    width: 1920px;
+    height: 171px;
+    left: 0px;
+    top: 120px;
+
+    background: #2C003E;
+
+    .hero-container {
+        position: absolute;
+        width: 1054px;
+        height: 54px;
+        left: 144px;
+        top: 20px;
+
+    }
+
+    h1 {
+        position: absolute;
+        left: 0.08%;
+        right: 20.6%;
+        top: -1.85%;
+        bottom: 1.85%;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 44px;
+        line-height: 54px;
+        /* identical to box height */
+
+
+        color: #EEEEEE;
+    }
+}
+
+section.client-list {
+    position: absolute;
+    width: 1671px;
+    height: 694px;
+    left: 104px;
+    top: 362px;
+
+    .client-list-container{
+        
+        .list-titles {
+            display: flex;
+            h3 {
+                padding-right: 5em;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 27px;
+                line-height: 33px;
+                /* identical to box height */
+
+
+                color: #2C003E;
+            }
+        }
+
+        .client-list-content {
+            display:flex;
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    left: 4.27%;
+                    right: 66.28%;
+                    top: 15.56%;
+                    bottom: 79.54%;
+
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 25px;
+                    line-height: 34px;
+
+                    color: #595959;
+                }
+            }
+        }
+
+    }
+}

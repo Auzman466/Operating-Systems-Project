@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
+body, html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'Montserrat';
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 1em 2em;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: calc(100% - 1em);
+  -webkit-box-shadow: 1px 1px 3px black;
+          box-shadow: 1px 1px 3px black;
+}
+
+header .logo {
+  padding: .25em;
+  font-weight: bold;
+}
+
+header .logo a {
+  color: #4CAF50;
+}
+
+header nav {
+  padding-top: .2em;
+  padding-right: 3em;
+}
+
+header nav .btn {
+  display: inline-block;
+  padding: .3em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-font-variant-ligatures: none;
+          font-variant-ligatures: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+header nav .btn--shadow {
+  color: white;
+  background: #FF5E00;
+}
+
+section.hero {
+  position: absolute;
+  width: 1920px;
+  height: 171px;
+  left: 0px;
+  top: 120px;
+  background: #2C003E;
+}
+
+section.hero .hero-container {
+  position: absolute;
+  width: 1054px;
+  height: 54px;
+  left: 144px;
+  top: 20px;
+}
+
+section.hero h1 {
+  position: absolute;
+  left: 0.08%;
+  right: 20.6%;
+  top: -1.85%;
+  bottom: 1.85%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 54px;
+  /* identical to box height */
+  color: #EEEEEE;
+}
+
+section.tasks {
+  position: absolute;
+  width: 1206px;
+  height: 633px;
+  left: 333px;
+  top: 300px;
+}
+
+section.tasks .tasks-container h3 {
+  position: absolute;
+  left: 6.18%;
+  right: 78.07%;
+  top: 3.16%;
+  bottom: 90.05%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 43px;
+  /* identical to box height */
+  color: #595959;
+}
+
+section.tasks .tasks-container .button1 a {
+  position: absolute;
+  left: 6.15%;
+  right: 65.03%;
+  top: 19.43%;
+  bottom: 6%;
+  background: #2C003E;
+}
+
+section.tasks .tasks-container .button1 a h1 {
+  position: absolute;
+  left: 14.07%;
+  right: 72.86%;
+  top: 46.13%;
+  bottom: 42.97%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 57px;
+  line-height: 69px;
+  color: #FDFDFD;
+}
+
+section.tasks .tasks-container .button2 a {
+  position: absolute;
+  left: 36.89%;
+  right: 34.29%;
+  top: 19.43%;
+  bottom: 6%;
+  background: #FF5E00;
+}
+
+section.tasks .tasks-container .button2 a h1 {
+  position: absolute;
+  left: 14.07%;
+  right: 72.86%;
+  top: 46.13%;
+  bottom: 42.97%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 57px;
+  line-height: 69px;
+  color: #FDFDFD;
+}
+
+section.tasks .tasks-container .button3 a {
+  position: absolute;
+  left: 67.63%;
+  right: 3.55%;
+  top: 19.43%;
+  bottom: 6%;
+  background: #51DACF;
+}
+
+section.tasks .tasks-container .button3 a h1 {
+  position: absolute;
+  left: 14.07%;
+  right: 72.86%;
+  top: 46.13%;
+  bottom: 42.97%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 57px;
+  line-height: 69px;
+  color: #FDFDFD;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+  top: 5em;
+  z-index: 100;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content ul {
+  list-style-type: none;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #06D85F;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=clients.css.map */

@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
+body, html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'Montserrat';
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 1em 2em;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: calc(100% - 1em);
+  -webkit-box-shadow: 1px 1px 3px black;
+          box-shadow: 1px 1px 3px black;
+}
+
+header .logo {
+  padding: .25em;
+  font-weight: bold;
+}
+
+header .logo a {
+  color: #4CAF50;
+}
+
+header nav {
+  padding-top: .2em;
+  padding-right: 3em;
+}
+
+header nav .btn {
+  display: inline-block;
+  padding: .3em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-font-variant-ligatures: none;
+          font-variant-ligatures: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+header nav .btn--shadow {
+  color: white;
+  background: #FF5E00;
+}
+
+section.hero {
+  position: absolute;
+  width: 1920px;
+  height: 171px;
+  left: 0px;
+  top: 120px;
+  background: #2C003E;
+}
+
+section.hero .hero-container {
+  position: absolute;
+  width: 1054px;
+  height: 54px;
+  left: 144px;
+  top: 20px;
+}
+
+section.hero h1 {
+  position: absolute;
+  left: 0.08%;
+  right: 20.6%;
+  top: -1.85%;
+  bottom: 1.85%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 54px;
+  /* identical to box height */
+  color: #EEEEEE;
+}
+
+section.info {
+  position: absolute;
+  width: 534px;
+  height: 44px;
+  left: 144px;
+  top: 300px;
+}
+
+section.info h2 {
+  position: absolute;
+  left: 0.17%;
+  right: 19.5%;
+  top: -2.27%;
+  bottom: 2.27%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height */
+  color: #2C003E;
+}
+
+section.info .info-container {
+  position: absolute;
+  width: 1041px;
+  height: 540px;
+  top: 125px;
+}
+
+section.info .info-container p {
+  margin-left: 1em;
+}
+
+section.info .info-container .info-container-1 {
+  background: white;
+  border: 1px solid black;
+  bottom: 74.81%;
+  margin-bottom: 1em;
+}
+
+section.info .info-container .info-container-1 h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 33px;
+  margin-left: 1em;
+  color: #2C003E;
+  border-bottom: 1px solid black;
+}
+
+section.info .info-container .info-container-2 {
+  background: white;
+  border: 1px solid black;
+  bottom: 74.81%;
+  margin-bottom: 1em;
+}
+
+section.info .info-container .info-container-2 h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 33px;
+  margin-left: 1em;
+  color: #2C003E;
+  border-bottom: 1px solid black;
+}
+
+section.info .info-container .info-container-3 {
+  background: white;
+  border: 1px solid black;
+  bottom: 74.81%;
+  margin-bottom: 1em;
+}
+
+section.info .info-container .info-container-3 h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 33px;
+  margin-left: 1em;
+  color: #2C003E;
+  border-bottom: 1px solid black;
+}
+/*# sourceMappingURL=profile.css.map */
